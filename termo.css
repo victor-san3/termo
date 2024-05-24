@@ -1,0 +1,88 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr
+{
+    width: 500px;
+}
+
+#titulo
+{
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#jogo
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#jogo1
+{
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#jogo2
+{
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game
+{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.tile
+{
+    /*Caixa*/
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /*Texto*/
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correto
+{
+    background-color: lightgreen;
+    color: white;
+    border-color: white;
+}
+
+.contem
+{
+    background-color: yellow;
+    color: white;
+    border-color: white;
+}
+
+.errado
+{
+    background-color: lightgray;
+    color: white;
+    border-color: white;
+}
