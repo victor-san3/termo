@@ -2,6 +2,7 @@ body
 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-color: rgb(250, 233, 210);
 }
 
 hr
@@ -52,10 +53,12 @@ hr
 .tile
 {
     /*Caixa*/
-    border: 2px solid black;
+    border: 2px solid rgb(226, 201, 165);
+    border-radius: 13px;
     width: 60px;
     height: 60px;
     margin: 2.5px;
+    background-color: rgb(226, 201, 165);
 
     /*Texto*/
     color: black;
@@ -68,21 +71,21 @@ hr
 
 .correto
 {
-    background-color: lightgreen;
+    background-color: green;
     color: white;
     border-color: white;
 }
 
 .contem
 {
-    background-color: yellow;
+    background-color: orange;
     color: white;
     border-color: white;
 }
 
 .errado
 {
-    background-color: lightgray;
+    background-color: red;
     color: white;
     border-color: white;
 }
