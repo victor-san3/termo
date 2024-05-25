@@ -12,7 +12,11 @@ var wordList = ["termo", "suíte", "ávido", "festa", "bebia", "honra", "ouvir",
 //var word = "ALUNO";
 var word1 = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 var word2 = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
-if(word1==word2)
+var word1SemAcento = removerAcentos(word1);
+var word2SemAcento = removerAcentos(word2);
+
+
+if(word1 == word2)
 {
     word2 = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 }
@@ -21,6 +25,8 @@ var wordListSemAcento = wordList.map(removerAcentos);
 
 console.log(word1);
 console.log(word2);
+console.log(word1SemAcento);
+console.log(word2SemAcento);
 
 window.onload = function()
 {
@@ -253,7 +259,7 @@ function update()
         //se estiver na posição correta
         if(!gameOver1)
         {
-            if(word1[c] == letter1)
+            if(word1SemAcento[c] == letter1)
             {
                 currTile1.classList.add("correto");
                 let keyTile = document.getElementById("Key" + letter1);
@@ -270,7 +276,7 @@ function update()
 
         if(!gameOver2)
         {
-            if(word2[c] == letter2)
+            if(word2SemAcento[c] == letter2)
             {
                 currTile2.classList.add("correto");
                 correto2 += 1;
@@ -300,7 +306,7 @@ function update()
 
         if(!gameOver1 && !currTile1.classList.contains("correto"))
         {
-            if(word1.includes(letter1) && letterCount1[letter1] > 0)
+            if(word1SemAcento.includes(letter1) && letterCount1[letter1] > 0)
             {
                 currTile1.classList.add("contem");
                 let keyTile = document.getElementById("Key" + letter1);
@@ -308,7 +314,7 @@ function update()
                 if (!keyTile.classList.contains("correto")) {
                     keyTile.classList.add("contem");
                 }
-                
+
                 letterCount1[letter1] -= 1;
             }
             //se não tem a letra na palavra
@@ -320,7 +326,7 @@ function update()
 
         if(!gameOver2 && !currTile2.classList.contains("correto"))
         {
-            if(word1.includes(letter2) && letterCount2[letter2] > 0)
+            if(word2SemAcento.includes(letter2) && letterCount2[letter2] > 0)
             {
                 currTile2.classList.add("contem");
                 letterCount2[letter2] -= 1;
