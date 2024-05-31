@@ -1,3 +1,5 @@
+const apiEndpoint = 'http://137.184.66.198/termo_api.php';
+
 var height = 6; //número de tentativas
 var width = 5; //comprimento da palavra
 
